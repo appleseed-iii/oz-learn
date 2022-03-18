@@ -1,11 +1,11 @@
 // test/Box.test.js
 // Load dependencies
-const { expect } = require('chai');
+const { expect } = require("chai");
 
 // Start test block
-describe('Box', function () {
+describe("Box", function () {
   before(async function () {
-    this.Box = await ethers.getContractFactory('Box');
+    this.Box = await ethers.getContractFactory("Box");
   });
 
   beforeEach(async function () {
@@ -14,12 +14,12 @@ describe('Box', function () {
   });
 
   // Test case
-  it('retrieve returns a value previously stored', async function () {
+  it("retrieve returns a value previously stored", async function () {
     // Store a value
     await this.box.store(42);
 
     // Test if the returned value is the same one
     // Note that we need to use strings to compare the 256 bit integers
-    expect((await this.box.retrieve()).toString()).to.equal('42');
+    expect((await this.box.retrieve()).toString()).to.equal("42");
   });
 });

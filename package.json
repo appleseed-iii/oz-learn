@@ -9,8 +9,19 @@
     "@nomiclabs/hardhat-waffle": "^2.0.0",
     "@openzeppelin/contracts": "^4.5.0",
     "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
     "ethereum-waffle": "^3.0.0",
     "ethers": "^5.5.4",
-    "hardhat": "^2.8.4"
+    "hardhat": "^2.8.4",
+    "prettier": "^2.6.0",
+    "prettier-plugin-solidity": "^1.0.0-beta.19"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "format": "prettier --check \"**/*.{ts,js,sol}\"",
+    "format:fix": "prettier --write \"**/*.{ts,js,sol}\"",
+    "test": "hardhat test"
   }
 }
